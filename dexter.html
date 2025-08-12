@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fanpage - Dexter Morgan</title>
+  <style>
+    :root{--accent:#c62828;--dark:#0b0b0b;--muted:#777}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:#0f0f10;color:#eee;line-height:1.5}
+    header{background:linear-gradient(90deg, rgba(0,0,0,0.85), rgba(12,12,12,0.4)), url('https://upload.wikimedia.org/wikipedia/en/0/0d/Dexter_Morgan.jpg') center/cover no-repeat; padding:3.5rem 1rem}
+    .container{max-width:1100px;margin:0 auto}
+    h1{font-size:2.25rem;margin:0 0 .25rem}
+    p.lead{margin:0;color:var(--muted)}
+    nav{display:flex;gap:.5rem;align-items:center;margin-top:1rem}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,.12);color:inherit;padding:.45rem .85rem;border-radius:6px;text-decoration:none}
+
+    main{padding:2rem 1rem}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:1.25rem}
+    .card{background:#0b0b0b;padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.6)}
+
+    .about h2{margin-top:0}
+    .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0}
+    .badge{background:rgba(198,40,40,.15);color:var(--accent);padding:.25rem .5rem;border-radius:6px;font-weight:600;font-size:.85rem}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:6px;display:block}
+
+    aside .small{font-size:.9rem;color:var(--muted)}
+    footer{padding:1.25rem;text-align:center;color:var(--muted);font-size:.9rem}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}header{padding:2.25rem}}
+    @media (max-width:420px){.gallery{grid-template-columns:repeat(1,1fr)}h1{font-size:1.6rem}}
+
+    .drip{position:relative;display:inline-block}
+    .drip::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:6px;height:12px;background:var(--accent);border-radius:6px;top:110%;animation:drip 1.6s infinite ease-in}
+    @keyframes drip{0%{opacity:0;transform:translateX(-50%) translateY(-6px)}30%{opacity:1;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(12px)}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Dexter Morgan <span class="drip">•</span></h1>
+      <p class="lead">Fanpage dedicada al vigilante forense favorito — noticias, citas memorables, y una galería dedicada.</p>
+      <nav>
+        <a class="btn" href="#about">Acerca</a>
+        <a class="btn" href="#gallery">Galería</a>
+        <a class="btn" href="#quotes">Citas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section class="card about" id="about">
+        <h2>Sobre Dexter</h2>
+        <p>Dexter Morgan es un personaje complejo: analista forense de salpicaduras de sangre en el departamento de policía de Miami con un secreto muy oscuro. En esta página encontrarás una recopilación de momentos icónicos, galerías y frases memorables.</p>
+        <div class="badges">
+          <span class="badge">Showtime</span>
+          <span class="badge">Drama</span>
+          <span class="badge">Thriller</span>
+        </div>
+
+        <h3 style="margin-top:1rem">Últimas noticias</h3>
+        <ul>
+          <li>Revival confirmado — nueva serie limitada.</li>
+          <li>Reestrenos y maratones disponibles en plataformas por temporadas.</li>
+        </ul>
+
+        <h3 style="margin-top:1rem">Ficha rápida</h3>
+        <p class="small"><strong>Alias:</strong> Dexter Morgan / "The Dark Passenger"<br><strong>Ocupación:</strong> Técnico forense (salpicaduras de sangre)<br><strong>Actor:</strong> Michael C. Hall</p>
+      </section>
+
+      <aside class="card">
+        <h3>Galería rápida</h3>
+        <div class="gallery" id="gallery">
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Dexter_Morgan.jpg" alt="Dexter 1">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Dexter_Michael_C_Hall.jpg" alt="Dexter 2">
+          <img src="https://upload.wikimedia.org/wikipedia/en/1/16/Dexter_Morgan_season_5_promo.jpg" alt="Dexter 3">
+          <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Dexter_Morgan_promo.jpg" alt="Dexter 4">
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/07/Dexter_Morgan_Blood_Slide_Box.jpg" alt="Dexter 5">
+          <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Dexter_Morgan_Miami.jpg" alt="Dexter 6">
+        </div>
+
+        <div style="margin-top:1rem">
+          <a class="btn" href="#quotes">Ver citas</a>
+        </div>
+
+        <hr style="margin:1rem 0;border:none;border-top:1px solid rgba(255,255,255,.04)">
+        <p class="small">¿Querés más secciones? Puedo agregar cronología de episodios, trivia, o una sección de fanart.</p>
+      </aside>
+    </div>
+
+    <section class="card" id="quotes" style="margin-top:1.25rem">
+      <h2>Citas memorables</h2>
+      <blockquote style="margin:0;padding:.75rem 1rem;background:rgba(255,255,255,.02);border-left:4px solid rgba(198,40,40,.15);border-radius:6px">
+        "Soy bueno buscando sangre. Soy bueno encontrando mentiras. Y soy bueno escondiendo ambas." — Dexter Morgan (frase de ejemplo)
+      </blockquote>
+
+      <div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
+        <button class="btn" onclick="randomQuote()">Frase aleatoria</button>
+        <button class="btn" onclick="downloadHTML()">Descargar HTML</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Fanpage no oficial. Derechos de imagen reservados a sus respectivos propietarios.
+  </footer>
+
+  <script>
+    const quotes = [
+      "I am Dexter. I am the darkness that hides in plain sight.",
+      "Tonight's the night.",
+      "I have a code. My father taught me.",
+      "There is nothing like getting back to nature. My nature.",
+      "We all make mistakes. But then we learn."
+    ];
+
+    function randomQuote(){
+      const q = quotes[Math.floor(Math.random()*quotes.length)];
+      alert(q);
+    }
+
+    function downloadHTML(){
+      const html = `<!doctype html>\n${document.documentElement.outerHTML}`;
+      const blob = new Blob([html], {type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'fanpage-dexter.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
+```
